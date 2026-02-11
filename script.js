@@ -8,15 +8,22 @@ console.log("event 2nd code start now");
 //     }
 // })
 let ol = document.getElementById("orderList2")
-ol.addEventListener("click",(e)=>{
+ol.addEventListener("click", (e) => {
     // console.log("hi");
 
 
+    // create element:
+    let liCreate = document.createElement("p");
+    liCreate.innerText = "add items new";
+    // parent element;
+    let parent = document.getElementsByClassName("delete");
+    parent.appendChild(liCreate)
+    // Remove code;
+    if (e.target.classList.contains("delete")) {
+        e.target.parentNode.removeChild(e.target)
+    }
+    // let addBtn = document.getElementById("addBtn");
 
-    
-    // if(e.target.classList.contains("delete")){
-    //     e.target.parentNode.removeChild(e.target)
-    // }
 
 
 
